@@ -3,13 +3,8 @@ import './App.css';
 //import Particles from 'react-particles-js';
 import HomePage from './Pages/Homepage/homepage.component';
 import { Switch, Route } from 'react-router-dom';
+import ShopPage from './Pages/Shop/shop';
 
-
-const HatsPage = () => (
-  <div>
-    <h1>HATS PAGE</h1>
-  </div>
-);
 
 
 class App extends React.Component{
@@ -24,7 +19,7 @@ class App extends React.Component{
     <div>
       <Switch>
     <Route exact path ='/' component={HomePage}/>
-    <Route  path ='/hats' component={HatsPage}/>
+    <Route  path ='/shop' component={ShopPage}/>
       </Switch>
      
     </div>
