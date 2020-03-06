@@ -1,7 +1,21 @@
 import React from 'react';
-import './App.css';import HomePage from './components/Homepage/homepage.component';
+import './App.css';
+//import Particles from 'react-particles-js';
+import HomePage from './Pages/Homepage/homepage.component';
 
-function App() {
+
+
+
+
+
+class App extends React.Component{
+  constructor(){
+    super();
+    this.state ={
+
+    }
+  }
+  render(){
   return (
     <div>
       <HomePage/>
@@ -9,5 +23,5 @@ function App() {
     </div>
   );
 }
-
+}
 export default App;
