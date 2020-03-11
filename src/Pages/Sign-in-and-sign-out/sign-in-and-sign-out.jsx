@@ -2,7 +2,7 @@ import React from 'react';
 import Particles from 'react-particles-js';
 import SignIn from "../../components/sign-in/sign-in";
 import "./sign-in-and-sign-out.scss"
-
+import SignUp from "../../components/sign-up/sign-up";
 
 
 const particlesOptions = {
@@ -44,6 +44,7 @@ constructor(){
     />
 <div className="sign-in-and-sign-up">
     <SignIn />
+    <SignUp />
 </div>
 </div>
   )
