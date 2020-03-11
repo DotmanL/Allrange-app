@@ -38,7 +38,7 @@ constructor(){
   }
   render(){
   return (
-      <div className="App">
+      <div className="signcolor">
     <Particles className='particles'
       params={particlesOptions}
     />

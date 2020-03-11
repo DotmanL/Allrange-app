@@ -2,6 +2,11 @@ import React from "react";
 import FormInput from "../form-input/form-input"
 import "./sign-in.scss";
 import CustomButton from '../../components/custom-button/custom-button';
+import ReactTypingEffect from 'react-typing-effect'
+
+import {signInWithGoogle} from '../../firebase/firebase.utils.js';
+
+
 
 class SignIn extends React.Component{
 constructor(props){
@@ -26,7 +31,12 @@ handleChange = (event) => {
 
 render(){
     return(
-        <div className='sign-in'>
+  
+  <div className='sign-in'>
+      <div className ="welcometext">
+<ReactTypingEffect
+      className="welcome" text= 'Welcome to the Allrange Shopping Store' /> 
+            </div>
             <h2> I already have an account</h2>
             <strong>Sign in with your email and password</strong>
             
@@ -48,9 +58,12 @@ render(){
             label="Password"
             required />
             
-
-            <CustomButton type="submit" 
-            > Sign In </CustomButton>
+                <div className="buttons">
+            <CustomButton type="submit"  > Sign In </CustomButton>
+            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+              Sign In with Google
+            </CustomButton>
+            </div>
             </form>
             
 

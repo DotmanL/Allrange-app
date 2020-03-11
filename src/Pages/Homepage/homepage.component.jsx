@@ -6,10 +6,12 @@ import './homepage.styles.scss';
 
 const HomePage = () => {
     return (
-        <div className="Homepage">
+        <div className='homecolor'>
+        <div className="homepage">
             <Directory/>
         </div>
 
+</div>
     );
 }
 
