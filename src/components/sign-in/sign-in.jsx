@@ -2,7 +2,7 @@ import React from "react";
 import FormInput from "../form-input/form-input"
 import "./sign-in.scss";
 import CustomButton from '../../components/custom-button/custom-button';
-import ReactTypingEffect from 'react-typing-effect'
+
 
 import {auth, signInWithGoogle} from '../../firebase/firebase.utils.js';
 
@@ -41,10 +41,7 @@ render(){
     return(
   
   <div className='sign-in'>
-      <div className ="welcometext">
-<ReactTypingEffect
-      className="welcome" text= 'Welcome to the Allrange Shopping Store' /> 
-            </div>
+      
             <h2> I already have an account</h2>
             <strong>Sign in with your email and password</strong>
             
