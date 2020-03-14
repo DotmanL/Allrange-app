@@ -14,16 +14,19 @@
     position: fixed;
     
   } 
+  .welcomecontainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        margin-left: 300px;
+        font-size: 30px;
+        color: white;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
   
-  .welcome{
-    padding: 10px 15px;
-    font-size: 25px;
-    color: white;
-    margin-top: 10px;
-    margin-left: auto;
-    display: flex;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
+  
 
   .options {
     width: 50%;

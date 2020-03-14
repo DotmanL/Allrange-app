@@ -12,8 +12,9 @@ import { auth } from '../../firebase/firebase.utils';
 const Header = ({ currentUser, hidden }) => (
 
     <div className="header">
-        <ReactTypingEffect
-            className="welcome" text='Welcome to Allrange Shopping Store' />
+        <div className='welcomecontainer'>
+        <ReactTypingEffect text='Welcome to the Allrange Shopping Store' />
+            </div>
         <Link className="logo-container" to="/">
             <Logo className='logo' />
         </Link>
