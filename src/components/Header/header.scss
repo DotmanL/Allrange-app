@@ -11,23 +11,11 @@
     height: 100%;
     width: 70px;
     padding: 25px;
-    position: fixed;
+  
     
   } 
-  .welcomecontainer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        text-align: center;
-        margin-left: 300px;
-        font-size: 30px;
-        color: white;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
+ 
   
-  
-
   .options {
     width: 50%;
     height: 100%;
@@ -40,5 +28,15 @@
       cursor: pointer;
     }
   }
- 
+  .welcomecontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    margin-left: 300px;
+    font-size: 30px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 }
