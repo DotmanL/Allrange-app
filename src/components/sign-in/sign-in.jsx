@@ -28,9 +28,10 @@ handleSubmit = async event => {
       this.setState({email: '', password:'',})
     } catch (error) {
         console.log(error);
-    };
+    }
 
-}
+};
+
 handleChange = (event) => {
     const {name, value} = event.target;
     this.setState({ [name]: value})
