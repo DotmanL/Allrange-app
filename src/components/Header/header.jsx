@@ -4,7 +4,6 @@ import ReactTypingEffect from 'react-typing-effect';
 import { connect } from 'react-redux';
 import CartIcon from '../cart-icon/cart-icon';
 import CartDropdown from '../cart-dropdown/cart-dropdown';
-import './header.scss'
 import  { createStructuredSelector } from 'reselect';
 import {selectCartHidden} from '../../redux/cart/cart.selectors';
 import {selectCurrentUser} from  '../../redux/user/user.selectors';
