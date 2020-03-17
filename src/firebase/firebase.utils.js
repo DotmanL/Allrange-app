@@ -35,7 +35,41 @@ const snapShot = await userRef.get();
 return userRef;
   };
 
+  export const addCollectionandDocuments = async (collectionKey, objectsToAdd) => {
+    const collectionRef = firestore.collection(collectionKey);
 
+    const batch = firestore.batch();
+    objectsToAdd.forEach(obj => {
+      const newDocRef = collectionRef.doc();
+      batch.set(newDocRef, obj);
+    });
+
+    return await batch.commit()
+  };
+
+
+  // fetch data code below to send our data as defined in the lifecycle method in shop component to our firestore db
+export const convertCollectionsSnapshotToMap =(collections) => {
+  const transformedCollection = collections.docs.map(doc =>{
+    const {title, items } = doc.data();
+    return {
+      routeName:encodeURI(title.toLowerCase()),
+      id: doc.id,
+      title,
+      items
+    }
+  });
+
+  //change below code to console.log transformedCollection initially.
+  // code below takes the first object eg; hats and passes it into the function as a lowercase title
+  //stored in the db collection and does that continously for other titles.
+
+ return transformedCollection.reduce((accumulator, collection) => {
+accumulator[collection.title.toLowerCase()] = collection;
+return accumulator;
+}, {});
+}
+// fetch data code stopped here
 
   firebase.initializeApp(config);
   export const auth = firebase.auth();
