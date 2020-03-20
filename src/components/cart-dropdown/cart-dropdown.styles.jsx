@@ -24,6 +24,11 @@ export const EmptyMessageContainer = styled.span`
   margin: 50px auto;
 `;
 
+export const EmptyCartContainer = styled.span`
+  font-size: 18px;
+  margin: 0px auto;
+`;
+
 export const CartItemsContainer = styled.div`
   height: 240px;
   display: flex;

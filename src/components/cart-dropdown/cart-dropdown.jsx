@@ -11,7 +11,8 @@ import {
   CartDropdownContainer,
   CartDropdownButton,
   EmptyMessageContainer,
-  CartItemsContainer
+  CartItemsContainer,
+  EmptyCartContainer
 } from './cart-dropdown.styles';
 
 const CartDropdown = ({ cartItems, history, dispatch }) => (
@@ -25,14 +26,22 @@ const CartDropdown = ({ cartItems, history, dispatch }) => (
         <EmptyMessageContainer>Your cart is empty</EmptyMessageContainer>
       )}
     </CartItemsContainer>
+
+    
+
+    {cartItems.length ? (
     <CartDropdownButton
       onClick={() => {
         history.push('/checkout');
         dispatch(toggleCartHidden());
-      }}
-    >
+      }}> 
+      
       GO TO CHECKOUT
     </CartDropdownButton>
+    ) : ( 
+    <EmptyCartContainer>Fill your Cart before you can proceed to Checkout Page</EmptyCartContainer>
+
+    )}
   </CartDropdownContainer>
 );
 

@@ -15,7 +15,8 @@ import {
   CheckoutHeaderContainer,
   HeaderBlockContainer,
   TotalContainer,
-  WarningContainer
+  WarningContainer, 
+  EmptyCartContainer
 } from './checkout.styles';
 
 const CheckoutPage = ({ cartItems, total }) => (
@@ -37,17 +38,31 @@ const CheckoutPage = ({ cartItems, total }) => (
         <span>Remove</span>
       </HeaderBlockContainer>
     </CheckoutHeaderContainer>
+
     {cartItems.map(cartItem => (
       <CheckoutItem key={cartItem.id} cartItem={cartItem} />
     ))}
     <TotalContainer>TOTAL:  ₦{total}</TotalContainer>
-    <WarningContainer>
+    
+
+
+    {cartItems.length ? (
+    <StripeCheckoutButton price={total} />
+    ) : ( 
+ <EmptyCartContainer>Fill your Cart before you can make payments</EmptyCartContainer>
+    )}
+
+<WarningContainer>
       <strong>*Please use the following test credit card for payments*</strong>
       <br />
       <strong> 5555 5555 5555 4444 - Exp: 01/22 - CVV:123</strong>
     </WarningContainer>
-    <StripeCheckoutButton price={total} />
   </CheckoutPageContainer>
+
+
+
+
+
 );
 
 const mapStateToProps = createStructuredSelector({
@@ -56,3 +71,7 @@ const mapStateToProps = createStructuredSelector({
 });
 
 export default connect(mapStateToProps)(CheckoutPage);
+
+
+
+ 

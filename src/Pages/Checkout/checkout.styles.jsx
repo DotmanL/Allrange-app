@@ -45,3 +45,9 @@ export const WarningContainer = styled.div`
   font-size: 24px;
   color: yellowgreen;
 `;
+
+export const EmptyCartContainer = styled.span`
+  font-size: 30px;
+  color: white;
+  margin: 30px auto;
+`;
