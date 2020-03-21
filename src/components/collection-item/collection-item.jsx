@@ -4,19 +4,19 @@ import { connect } from 'react-redux';
 import { addItem } from '../../redux/cart/cart.actions';
 
 import {
-  CollectionItemContainer,
   CollectionFooterContainer,
   AddButton,
   BackgroundImage,
   NameContainer,
-  PriceContainer
+  PriceContainer,
+  Card
 } from './collection-item.styles';
 
 const CollectionItem = ({ item, addItem }) => {
   const { name, price, imageUrl } = item;
 
   return (
-    <CollectionItemContainer>
+  <Card> 
       <BackgroundImage className='image' imageUrl={imageUrl} />
       <CollectionFooterContainer>
         <NameContainer>{name}</NameContainer>
@@ -25,7 +25,7 @@ const CollectionItem = ({ item, addItem }) => {
       <AddButton onClick={() => addItem(item)} inverted>
         Add to cart
       </AddButton>
-    </CollectionItemContainer>
+    </Card>
   );
 };
 

@@ -1,22 +1,29 @@
 import styled from 'styled-components';
 import CustomButton from '../custom-button/custom-button';
 
-export const CollectionItemContainer = styled.div`
-  width: 22vw;
-  display: flex;
-  flex-direction: column;
-  height: 350px;
-  align-items: center;
-  position: relative;
-  &:hover {
-    .image {
-      opacity: 0.8;
-    }
-    button {
-      opacity: 0.85;
-      display: flex;
-    }
-  }
+export const Card = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 22vw;
+height: 350px;
+background-color: #c4b2a9;
+border-radius: 4px;
+padding: 1rem;
+margin: 1rem;
+position: relative;
+
+
+&:hover {
+  .image{
+  opacity: 0.5;
+  cursor: pointer;
+}
+button {
+  opacity: 0.85;
+   display: flex;
+}
+}
 `;
 
 export const AddButton = styled(CustomButton)`
@@ -26,6 +33,10 @@ export const AddButton = styled(CustomButton)`
   top: 255px;
   display: none;
 `;
+
+
+
+
 
 export const BackgroundImage = styled.div`
   width: 100%;
