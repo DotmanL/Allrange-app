@@ -1,4 +1,5 @@
 import React from 'react';
+import Tilt from 'react-tilt';
 import { connect } from 'react-redux';
 
 import { addItem } from '../../redux/cart/cart.actions';
@@ -16,6 +17,7 @@ const CollectionItem = ({ item, addItem }) => {
   const { name, price, imageUrl } = item;
 
   return (
+    <Tilt options={{ max: 75} }>
   <Card> 
       <BackgroundImage className='image' imageUrl={imageUrl} />
       <CollectionFooterContainer>
@@ -26,6 +28,7 @@ const CollectionItem = ({ item, addItem }) => {
         Add to cart
       </AddButton>
     </Card>
+    </Tilt>
   );
 };
 
