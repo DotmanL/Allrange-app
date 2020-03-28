@@ -5,12 +5,12 @@ export const Card = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-width: 20vw;
+width: 22vw;
 height: 350px;
 background-color: white;
 border-radius: 0px;
-padding: 1rem;
-margin: 1rem;
+padding: 0.5rem;
+margin: 0.5rem;
 position: relative;
 
 

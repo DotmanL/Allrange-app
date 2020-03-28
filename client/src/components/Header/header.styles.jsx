@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 export const HeaderContainer = styled.div`
-background: #DAAD86;
+
 height: 70px;
 width: 100%;
 display: flex;
@@ -27,9 +27,11 @@ export const LogoContainer = styled(Link)`
     justify-content: flex-start; 
     margin-top: 5px;
     margin-left: 0px;
+   
+   
     @media screen and ( max-width: 800px) {
-      width: 50px;
-      padding: 0px;
+      width: 70px;
+      padding: 0px 5px;
   }
 
 `;
@@ -39,6 +41,8 @@ export const OptionsContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    font-size: 15px;
+  
 
     @media screen and ( max-width: 800px) {
       width: 80%;
