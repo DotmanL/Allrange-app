@@ -4,7 +4,7 @@ import { createStructuredSelector } from 'reselect';
 
 import StripeCheckoutButton from '../../components/stripe-button/stripe-button';
 import CheckoutItem from '../../components/checkout-item/checkout-item';
-
+import Paystack from '../../components/paystack/paystack-button'
 
 import {
   selectCartItems,
@@ -45,6 +45,12 @@ const CheckoutPage = ({ cartItems, total }) => (
     ))}
     <TotalContainer>TOTAL:  ₦{total}</TotalContainer>
     
+    {cartItems.length ? (
+  <Paystack price={total} />
+  ) : ( 
+<EmptyCartContainer>Fill your Cart before you can make payments</EmptyCartContainer>
+  )}
+  
 
 
     {cartItems.length ? (
@@ -52,7 +58,8 @@ const CheckoutPage = ({ cartItems, total }) => (
     ) : ( 
  <EmptyCartContainer>Fill your Cart before you can make payments</EmptyCartContainer>
     )}
-    
+
+
    
   
 
