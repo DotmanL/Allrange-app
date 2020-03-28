@@ -7,8 +7,8 @@ flex-direction: column;
 align-items: center;
 width: 20vw;
 height: 350px;
-background-color: #c4b2a9;
-border-radius: 4px;
+background-color: white;
+border-radius: 0px;
 padding: 1rem;
 margin: 1rem;
 position: relative;
@@ -24,6 +24,22 @@ button {
    display: flex;
 }
 }
+
+@media screen and ( max-width: 800px) {
+  width: 40vw;
+
+
+  
+&:hover {
+  .image{
+  opacity: unset;
+
+}
+button {
+  opacity: unset;
+}
+}
+}
 `;
 
 export const AddButton = styled(CustomButton)`
@@ -32,6 +48,13 @@ export const AddButton = styled(CustomButton)`
   position: absolute;
   top: 255px;
   display: none;
+
+  @media screen and ( max-width: 800px) {
+    display: block;
+    opacity: 0.9;
+    min-width: unset;
+    padding: 0 10px;
+  }  
 `;
 
 

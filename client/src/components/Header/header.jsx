@@ -1,6 +1,6 @@
 import React from 'react';
-import { ReactComponent as Logo } from '../../assets/crown.svg'
-import ReactTypingEffect from 'react-typing-effect';
+import { ReactComponent as Logo } from '../../assets/allrange.svg'
+// import ReactTypingEffect from 'react-typing-effect';
 import { connect } from 'react-redux';
 import CartIcon from '../cart-icon/cart-icon';
 import CartDropdown from '../cart-dropdown/cart-dropdown';
@@ -9,7 +9,7 @@ import {selectCartHidden} from '../../redux/cart/cart.selectors';
 import {selectCurrentUser} from  '../../redux/user/user.selectors';
 
 
-import { HeaderContainer, LogoContainer, OptionsContainer,  OptionLink, ReactTyping} from './header.styles'
+import { HeaderContainer, LogoContainer, OptionsContainer,  OptionLink,} from './header.styles'
 
 import { signOutStart } from '../../redux/user/user.actions'
 
@@ -19,9 +19,9 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
     <LogoContainer to='/'>
       <Logo className='logo' />
       </LogoContainer>
-      <ReactTyping>
+      {/* <ReactTyping>
         <ReactTypingEffect text='Welcome to the Allrange Shopping Store' />
-       </ReactTyping>  
+       </ReactTyping>   */}
     
     <OptionsContainer>
       <OptionLink to='/shop'>SHOP</OptionLink>

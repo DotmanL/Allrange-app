@@ -5,6 +5,7 @@ import { createStructuredSelector } from 'reselect';
 import StripeCheckoutButton from '../../components/stripe-button/stripe-button';
 import CheckoutItem from '../../components/checkout-item/checkout-item';
 
+
 import {
   selectCartItems,
   selectCartTotal
@@ -51,6 +52,13 @@ const CheckoutPage = ({ cartItems, total }) => (
     ) : ( 
  <EmptyCartContainer>Fill your Cart before you can make payments</EmptyCartContainer>
     )}
+    
+   
+  
+
+
+
+
 
 <WarningContainer>
       <strong>*Please use the following test credit card for payments*</strong>

@@ -9,11 +9,16 @@ export const CheckoutItemContainer = styled.div`
   font-size: 20px;
   align-items: center;
   background: white;
+
+  @media screen and (max-width: 800px) {
+    font-size: 18px;
+  }
 `;
 
 export const ImageContainer = styled.div`
   width: 23%;
   padding-right: 15px;
+  padding-left: 15px;
   img {
     width: 100%;
     height: 100%;
@@ -22,6 +27,10 @@ export const ImageContainer = styled.div`
 
 export const TextContainer = styled.span`
   width: 23%;
+
+  @media screen and (max-width: 800px) {
+    width: 22%;
+  }
 `;
 
 export const QuantityContainer = styled(TextContainer)`

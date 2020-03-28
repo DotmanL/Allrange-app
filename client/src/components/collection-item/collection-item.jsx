@@ -17,7 +17,7 @@ const CollectionItem = ({ item, addItem }) => {
   const { name, price, imageUrl } = item;
 
   return (
-    <Tilt options={{ max: 75} }>
+    <Tilt options={{ max: 10} }>
   <Card> 
       <BackgroundImage className='image' imageUrl={imageUrl} />
       <CollectionFooterContainer>

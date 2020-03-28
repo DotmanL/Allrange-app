@@ -1,9 +1,11 @@
 import React from 'react';
 import Particles from 'react-particles-js';
 import SignIn from "../../components/sign-in/sign-in";
-import "./sign-in-and-sign-out.scss"
-import SignUp from "../../components/sign-up/sign-up";
 
+import SignUp from "../../components/sign-up/sign-up";
+import './sign-in-and-sign-up.scss'
+
+import { SignInAndSignUpContainer,} from "./sign-in-and-sign-up.styles.jsx"
 
 const particlesOptions = {
     particles: {
@@ -29,26 +31,28 @@ const particlesOptions = {
     }
   };
 
-class SignInAndSignUpPage extends React.Component{
-constructor(){
-    super();
-    this.state ={
+  const SignInAndSignUpPage = () => (
+    <SignInAndSignUpContainer>
+       <Particles className='particles'
+        params={particlesOptions}
+      />
+      <SignIn />
+      <SignUp />
+    </SignInAndSignUpContainer>
+  );
+  
+  export default SignInAndSignUpPage;
 
-    }
-  }
-  render(){
-  return (
-      <div className="signcolor">
-    <Particles className='particles'
-      params={particlesOptions}
-    />
-<div className="sign-in-and-sign-up">
-    <SignIn />
-    <SignUp />
-</div>
-</div>
-  )
-  }
-}
+ 
 
-export default SignInAndSignUpPage;
+
+
+
+
+
+
+
+
+
+
+ 
