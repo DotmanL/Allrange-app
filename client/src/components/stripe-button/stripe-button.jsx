@@ -29,7 +29,7 @@ const onToken = token => {
 
 return(
     <StripeCheckout 
-    label= 'Pay Now'
+    label= 'Pay With Stripe'
     name='Allrange'
     billingAddress
     shippingAddress

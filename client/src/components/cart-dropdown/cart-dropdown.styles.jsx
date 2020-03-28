@@ -8,15 +8,20 @@ height: 340px;
 display: flex;
 flex-direction: column;
 padding: 20px;
-border: 1px solid black;
-background-color: bisque;
+border: 3px solid  white;
+background-color:  #659dbd;
 top: 90px;
 right: 60px;
 z-index: 5;
+
+@media screen and ( max-width: 800px) {
+  right: 20px;
+}
 `;
 
 export const CartDropdownButton = styled(CustomButton)`
   margin-top: auto;
+  background: green;
 `;
 
 export const EmptyMessageContainer = styled.span`
