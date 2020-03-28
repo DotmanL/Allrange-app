@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const SignInContainer = styled.div`
-  width: 380px;
+  width: 350px;
   display: flex;
   flex-direction: column;
+  
 `;
 
 export const SignInTitle = styled.h2`

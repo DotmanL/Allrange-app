@@ -25,7 +25,8 @@ export const LogoContainer = styled(Link)`
     padding: 25px;
     align-items: center;
     justify-content: flex-start; 
-
+    margin-top: 5px;
+    margin-left: 0px;
     @media screen and ( max-width: 800px) {
       width: 50px;
       padding: 0px;
