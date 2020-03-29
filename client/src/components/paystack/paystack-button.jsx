@@ -11,7 +11,9 @@ const Paystack = ({price}) => {
     
     const callback = (response) => {
         console.log(response); // card charged successfully, get reference here
+        alert("Payment Successful")
     }
+    
 
    const  close = () => {
         console.log("Payment closed");
