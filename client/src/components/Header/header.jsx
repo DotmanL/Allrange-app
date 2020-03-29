@@ -9,14 +9,14 @@ import {selectCartHidden} from '../../redux/cart/cart.selectors';
 import {selectCurrentUser} from  '../../redux/user/user.selectors';
 
 
-import { HeaderContainer, LogoContainer, OptionsContainer,  OptionLink,} from './header.styles'
+import { HeaderContainer, LogoContainer, OptionsContainer,  OptionLink, OptionCont} from './header.styles'
 
 import { signOutStart } from '../../redux/user/user.actions'
 
 
-const Header = ({ currentUser, hidden, signOutStart }) => (
+const Header = ({ currentUser, hidden, signOutStart,}) => (
     <HeaderContainer>
-    <LogoContainer to='/'>
+       <LogoContainer to='/'>
       <Logo className='logo' />
       </LogoContainer>
       {/* <ReactTyping>
@@ -25,15 +25,21 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
     
     <OptionsContainer>
       <OptionLink to='/shop'>SHOP</OptionLink>
-      <OptionLink to='/shop'>CONTACT</OptionLink>
-      <OptionLink to='/myprofile'>My Profile</OptionLink>
+      <OptionLink to='/contactus'>CONTACT</OptionLink>
+      <OptionLink to='/myprofile'>DASHBOARD</OptionLink>
+      
       {currentUser ? (
+        <OptionCont>
         <OptionLink as='div' onClick={signOutStart}>
           SIGN OUT
         </OptionLink>
+        <OptionLink as="div">{`Welcome ${currentUser.displayName}`}</OptionLink>
+          </OptionCont>
+        
       ) : (
         <OptionLink to='/signin'>SIGN IN</OptionLink>
       )}
+
       <CartIcon />
     </OptionsContainer>
     {hidden ? null : <CartDropdown />}
@@ -53,3 +59,8 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
   )(Header);
+
+
+
+  // <img className='thumb' src={`${currentUser.photoURL}`} alt= 'img' /> 
+      

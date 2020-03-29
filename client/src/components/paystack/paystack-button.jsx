@@ -1,13 +1,14 @@
 import React from 'react';
 import PaystackButton from 'react-paystack';
-import { Pay } from './paystack-button.styles'
+import { Pay } from './paystack-button.styles';
+import {selectCurrentUser} from  '../../redux/user/user.selectors';
+import { connect } from 'react-redux';
+import  { createStructuredSelector } from 'reselect';
 
-
-const Paystack = ({price}) => {
+const Paystack = ({price, currentUser}) => {
     const priceForPaystack = price*100;
     const key = "pk_test_58e8c6e2944476cb88d50142252d98664f53f2c3";
-    const email = "dot@gmail.com";
-
+    const email = (currentUser.email);
     
     const callback = (response) => {
         console.log(response); // card charged successfully, get reference here
@@ -31,6 +32,7 @@ const Paystack = ({price}) => {
     }
 
     return (
+        
             <Pay>
           <PaystackButton
             text="Pay with Paystack"
@@ -49,4 +51,11 @@ const Paystack = ({price}) => {
     );
   }
 
-export default Paystack;
+  const mapStateToProps = createStructuredSelector ({
+    currentUser: selectCurrentUser
+})
+
+
+export default connect
+    (mapStateToProps)
+      (Paystack);

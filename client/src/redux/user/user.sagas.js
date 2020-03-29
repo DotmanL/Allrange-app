@@ -23,11 +23,14 @@ export function* getSnapshotFromUserAuth(userAuth, additionalData) {
         const userRef = yield call(createUserProfileDocument, userAuth, additionalData);
         const userSnapshot = yield userRef.get();
         yield put(
-            signInSuccess({ id: userSnapshot.id, ...userSnapshot.data() })
+            signInSuccess({ id: userSnapshot.id, ...userSnapshot.data() })  
         );
     } catch (error) {
+        
         yield put(signInFailure(error));
+        
     }
+
 }
 
 export function* signInWithGoogle() {
@@ -49,8 +52,10 @@ export function* signInWithEmail({ payload: { email, password } }) {
     try {
         const { user } = yield auth.signInWithEmailAndPassword(email, password);
         yield getSnapshotFromUserAuth(user);
+        alert("sign in success")
     } catch (error) {
-        yield put(signInFailure(error))
+        
+        yield put(signInFailure(alert("sign in failure")))
     }
 }
 

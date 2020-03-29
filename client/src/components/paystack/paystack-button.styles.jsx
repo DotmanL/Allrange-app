@@ -21,8 +21,7 @@ display: flex;
 flex-direction: flex-end;
 
 &:hover {
-    background-color: green;
-    
+    background-color: green; 
   }
     }
 `;

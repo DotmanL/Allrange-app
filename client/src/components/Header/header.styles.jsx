@@ -52,11 +52,40 @@ export const OptionsContainer = styled.div`
     `;
 
 export const OptionLink = styled(Link)`
-  
-  padding: 10px 15px;
+  font-size: 20px;
+  font-style: strong;
+  padding: 10px 20px;
   cursor: pointer;
 
+
+  @media screen and ( max-width: 800px) {
+      font-size: 10px;
+      padding: 5px 10px;
+  }
+
 `;
+
+
+
+export const OptionCont = styled.div`
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-style: strong;
+    color: white;
+  
+
+    @media screen and ( max-width: 800px) {
+      width: 80%;
+  }
+
+
+    `;
+
+
+
 
 // export const ReactTyping = styled.div`
 //     display: flex;

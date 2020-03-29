@@ -6,13 +6,15 @@ import ShopPage from './Pages/Shop/shop';
 import Header from './components/Header/header';
 import SignInAndSignUpPage from './Pages/Sign-in-and-sign-up/sign-in-and-sign-up';
 import CheckOutPage from './Pages/Checkout/checkout';
-import UserProfilePage from './Pages/user-profile/user-profile'
+
 
 import {connect} from 'react-redux';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
 
 import {createStructuredSelector} from 'reselect';
+import Dashboard from './Pages/Dashboard/dashboard';
+import ContactPage from './Pages/ContactPage/contact';
 
 
 
@@ -31,7 +33,9 @@ const App = ({ checkUserSession, currentUser }) => {
       <Switch>
     <Route exact path ='/' component={HomePage}/>
     <Route  path ='/shop' component={ShopPage}/>
-    <Route  path ='/myprofile' component={UserProfilePage}/>
+    <Route  path ='/myprofile' component={Dashboard}/>
+    <Route  path ='/contactus' component={ContactPage}/>
+ 
     <Route exact path ='/checkout' component={CheckOutPage}/>
     <Route exact path ='/signin' 
     render={() => 
