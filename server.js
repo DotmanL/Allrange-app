@@ -9,7 +9,7 @@ if (process.env.NODE_ENV !== 'production') require ('dotenv').config();
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 
-const paystack = require("paystack")(process.env.PAYSTACK_SECRET);
+// const paystack = require("paystack")(process.env.PAYSTACK_SECRET);
 
 // import our stripe libraray and access to our stripe secret key stored and hidden in our.env
 // give us access to stripe functions such as stripe.charges, etc..
