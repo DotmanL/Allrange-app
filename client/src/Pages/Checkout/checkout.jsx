@@ -58,16 +58,8 @@ const CheckoutPage = ({ cartItems, total, user }) => (
     {cartItems.length ? (
     <StripeCheckoutButton price={total} />
     ) : ( 
- <EmptyCartContainer>Fill your Cart before you can make payments</EmptyCartContainer>
+      null
     )}
-
-
-   
-  
-
-
-
-
 
 <WarningContainer>
       <strong>*Please use the following test credit card for payments*</strong>
