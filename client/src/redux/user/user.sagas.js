@@ -19,8 +19,12 @@ import {
 
 
 export function* getSnapshotFromUserAuth(userAuth, additionalData) {
+    // console.log(userAuth) shows us our user details and uid
     try {
-        const userRef = yield call(createUserProfileDocument, userAuth, additionalData);
+        const userRef = yield call
+        (createUserProfileDocument,
+             userAuth, 
+             additionalData);
         const userSnapshot = yield userRef.get();
         yield put(
             signInSuccess({ id: userSnapshot.id, ...userSnapshot.data() })  
