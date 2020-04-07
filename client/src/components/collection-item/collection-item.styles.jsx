@@ -27,6 +27,7 @@ button {
 
 @media screen and ( max-width: 800px) {
   width: 40vw;
+  height: 100vw;
 
 
   
@@ -81,9 +82,17 @@ export const CollectionFooterContainer = styled.div`
 export const NameContainer = styled.span`
   width: 90%;
   margin-bottom: 15px;
+
+
+  @media screen and ( max-width: 800px) {
+  font-size: 12px;
+  font-family: Helvetica, sans-serif;
+  }
+
+
 `;
 
 export const PriceContainer = styled.span`
-  width: 10%;
+  width: 20%;
   text-align: right;
 `;
