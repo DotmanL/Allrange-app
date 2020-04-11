@@ -7,13 +7,6 @@ import CheckoutItem from '../../components/checkout-item/checkout-item';
 import Paystack from '../../components/paystack/paystack-button'
 
 import {
-  selectCartItems,
-  selectCartTotal
-} from '../../redux/cart/cart.selectors';
-
- 
-
-import {
   CheckoutPageContainer,
   CheckoutHeaderContainer,
   HeaderBlockContainer,
@@ -22,7 +15,15 @@ import {
   EmptyCartContainer
 } from './checkout.styles';
 
-const CheckoutPage = ({ cartItems, total, user }) => (
+
+import {
+  selectCartItems,
+  selectCartTotal
+} from '../../redux/cart/cart.selectors';
+
+ 
+
+export const CheckoutPage = ({ cartItems, total, }) => (
   <CheckoutPageContainer>
     <CheckoutHeaderContainer>
       <HeaderBlockContainer>

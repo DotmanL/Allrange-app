@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CheckoutPage component 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      <span>
+        Product
+      </span>
+    </styled.div>
+    <styled.div>
+      <span>
+        Description
+      </span>
+    </styled.div>
+    <styled.div>
+      <span>
+        Quantity
+      </span>
+    </styled.div>
+    <styled.div>
+      <span>
+        Price
+      </span>
+    </styled.div>
+    <styled.div>
+      <span>
+        Remove
+      </span>
+    </styled.div>
+  </styled.div>
+  <styled.div>
+    TOTAL:  ₦
+    100
+  </styled.div>
+  <styled.span>
+    Fill your Cart before you can make payments
+  </styled.span>
+  <styled.div>
+    <strong>
+      *Please use the following test credit card for payments*
+    </strong>
+    <br />
+    <strong>
+       5555 5555 5555 4444 - Exp: 01/22 - CVV:123
+    </strong>
+  </styled.div>
+</styled.div>
+`;
