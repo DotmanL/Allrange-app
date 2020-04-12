@@ -7,6 +7,7 @@ export const CheckoutPageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 50px auto 0;
+ 
   button {
     margin-left: auto;
     margin-top: 50px;
@@ -30,21 +31,26 @@ export const HeaderBlockContainer = styled.div`
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   width: 23%;
   color: darkblue;
+  font-size: 16px;
   
   &:last-child {
     width: 8%;
   }
 
   @media screen and (max-width: 800px) {
-    width: 22%
+    width: 60vw;
+    font-size: 12px;
   }
 `
 
 export const TotalContainer = styled.div`
+ border: 2px solid;
+  background: green;
   margin-top: 30px;
   margin-left: auto;
-  font-size: 36px;
+  font-size: 30px;
   color: white;
+  
 `;
 
 export const WarningContainer = styled.div`
@@ -58,4 +64,16 @@ export const EmptyCartContainer = styled.span`
   font-size: 30px;
   color: white;
   margin: 30px auto;
+`;
+
+
+export const PaystackContainer = styled.div`
+  margin-left: 5%;
+  width: 50vw;
+
+  
+  @media screen and (max-width: 800px) {
+    margin-left: 50%;
+    width: 50vw;
+  }
 `;

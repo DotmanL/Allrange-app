@@ -12,7 +12,8 @@ import {
   HeaderBlockContainer,
   TotalContainer,
   WarningContainer, 
-  EmptyCartContainer
+  EmptyCartContainer,
+  PaystackContainer
 } from './checkout.styles';
 
 
@@ -47,12 +48,18 @@ export const CheckoutPage = ({ cartItems, total, }) => (
       <CheckoutItem key={cartItem.id} cartItem={cartItem} />
     ))}
     <TotalContainer>TOTAL:  ₦{total}</TotalContainer>
-    
+ 
     {cartItems.length ? (
-  <Paystack price={total} />
+        
+    <PaystackContainer>
+  <Paystack  price={total} />
+  </PaystackContainer>
   ) : ( 
 <EmptyCartContainer>Fill your Cart before you can make payments</EmptyCartContainer>
+  
   )}
+  
+  
   
 
 

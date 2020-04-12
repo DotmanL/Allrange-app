@@ -55,8 +55,8 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 border: 0.5px solid black;
-background-color: mintcream;
-opacity: 0.7;
+background-color: white;
+opacity: 0.9;
 position: absolute;
 @media screen and ( max-width: 800px) {
   width: 70px;
@@ -71,16 +71,19 @@ export const ContentTitle = styled.span`
   margin-bottom: 6px;
   font-size: 22px;
   color: #4a4a4a;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   @media screen and ( max-width: 800px) {
-    font-size: 15px;
+    font-size: 12px;
 }
 `;
 
 export const ContentSubtitle = styled.span`
   font-weight: lighter;
   font-size: 16px;
+  color: black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
  
   @media screen and ( max-width: 800px) {
-    font-size: 13px;
+    font-size: 16px;
 }
 `;
