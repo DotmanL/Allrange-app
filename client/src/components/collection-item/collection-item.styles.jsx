@@ -7,7 +7,7 @@ flex-direction: column;
 align-items: center;
 width: 22vw;
 height: 350px;
-background-color: white;
+background-color: darkblue;
 border-radius: 0px;
 padding: 0.5rem;
 margin: 0.5rem;
@@ -80,6 +80,7 @@ export const CollectionFooterContainer = styled.div`
 `;
 
 export const NameContainer = styled.span`
+  color: white;
   width: 90%;
   margin-bottom: 15px;
 
@@ -93,6 +94,7 @@ export const NameContainer = styled.span`
 `;
 
 export const PriceContainer = styled.span`
+  color: white;
   width: 20%;
   text-align: right;
 `;

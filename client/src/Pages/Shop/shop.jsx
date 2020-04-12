@@ -9,6 +9,7 @@ import { ShopPageContainer } from './shop.styles'
 
 import Spinner from '../../components/spinner/spinner';
 
+
 const CollectionsOverviewContainer = lazy(() => import ('../../components/collections-overview/collections-overview.container'))
 const CollectionPageContainer  = lazy(() => import ('../Collection/collection.container'))
 
@@ -22,7 +23,9 @@ const ShopPage = ({fetchCollectionsStart, match}) => {
   
   
 return(
+  
   <ShopPageContainer>
+   
         <Suspense fallback= {<Spinner />}>
         <Route exact path ={`${match.path}`}
          component ={CollectionsOverviewContainer}

@@ -19,6 +19,7 @@ margin-bottom: 25px;
 `;
 
 export const LogoContainer = styled(Link)`
+  
   width: 50%;
     height: 100%;
     display: flex;
@@ -52,8 +53,10 @@ export const OptionsContainer = styled.div`
     `;
 
 export const OptionLink = styled(Link)`
+  color: darkblue;
   font-size: 20px;
-  font-style: strong;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
   padding: 10px 20px;
   cursor: pointer;
 

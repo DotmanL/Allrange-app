@@ -8,7 +8,7 @@ export const MenuItemContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 1px solid white;
+	border: 1px solid darkblue;
 	margin: 0 7.5px 15px;
 	overflow: hidden;
 	&:hover {
@@ -30,10 +30,9 @@ export const MenuItemContainer = styled.div`
   &:last-child {
     margin-left: 7.5px;
   }
-
   @media screen and ( max-width: 800px) {
-    height: 200px;
-    width: 100px;
+    height: 130px;
+    width: 75px;
 }
 `;
 
@@ -43,6 +42,8 @@ export const BackgroundImageContainer = styled.div`
   background-size: cover;
   background-position: center;
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+  
+  
   `;
 
   
@@ -57,6 +58,11 @@ border: 0.5px solid black;
 background-color: mintcream;
 opacity: 0.7;
 position: absolute;
+@media screen and ( max-width: 800px) {
+  width: 70px;
+  height: 80px; 
+    
+}
 `;
 
 
@@ -65,9 +71,16 @@ export const ContentTitle = styled.span`
   margin-bottom: 6px;
   font-size: 22px;
   color: #4a4a4a;
+  @media screen and ( max-width: 800px) {
+    font-size: 15px;
+}
 `;
 
 export const ContentSubtitle = styled.span`
   font-weight: lighter;
   font-size: 16px;
+ 
+  @media screen and ( max-width: 800px) {
+    font-size: 13px;
+}
 `;

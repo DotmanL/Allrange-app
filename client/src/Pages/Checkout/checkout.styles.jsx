@@ -27,8 +27,9 @@ export const CheckoutHeaderContainer = styled.div`
 
 export const HeaderBlockContainer = styled.div`
   text-transform: capitalize;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   width: 23%;
-  color: white;
+  color: darkblue;
   
   &:last-child {
     width: 8%;
@@ -36,7 +37,8 @@ export const HeaderBlockContainer = styled.div`
 
   @media screen and (max-width: 800px) {
     width: 22%
-`;
+  }
+`
 
 export const TotalContainer = styled.div`
   margin-top: 30px;
@@ -49,7 +51,7 @@ export const WarningContainer = styled.div`
   text-align: center;
   margin-top: 40px;
   font-size: 24px;
-  color: yellowgreen;
+  color: white;
 `;
 
 export const EmptyCartContainer = styled.span`
