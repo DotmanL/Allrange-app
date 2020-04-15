@@ -21,6 +21,14 @@ left: 0;
 z-index: -1;
 background-position: center; 
 background-repeat: no-repeat;
+
+@media screen and (max-width: 800px) {
+    background-size: cover;
+    background-repeat: repeat;
+    
+}
+
+
 }`
 
 export const SignInAndSignUpContainer = styled.div`
