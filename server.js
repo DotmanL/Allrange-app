@@ -5,6 +5,9 @@ const path = require('path');
 const compression = require('compression');
 const enforce = require('express-sslify');
 
+const nodemailer = require('nodemailer');
+const morgan = require('morgan')
+
 
 if (process.env.NODE_ENV !== 'production') require ('dotenv').config();
 
@@ -21,10 +24,54 @@ const port = process.env.PORT || 5000;
 
 
 app.use(compression());
-app.use(bodyParser.json());
+app.use(express.json())
+//app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded ({ extended: true }));
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use(cors());
+app.use(morgan('dev'))
+
+
+app.post('/sendtome', (req, res) =>  {
+    const name = req.body.name;
+	const email = req.body.email;
+    const message = req.body.message;
+    
+
+const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
+    auth: {
+      user: process.env.THE_EMAIL,
+      pass: process.env.THE_PASSWORD
+    }
+  });
+      const mail = {
+		from: name,
+		to: 'oladotunlawal7@gmail.com',
+		message: message,
+        email: email
+    };
+
+    transporter.sendMail(mail, (err,data) => {
+    if(err) {
+      res.json({
+        status: 'fail'
+      })
+    } else {
+      res.json({
+        status: 'success'
+      })
+    }
+  }) 
+
+});
+
+
+
+
+
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, 'client/build')));

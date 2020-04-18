@@ -10,6 +10,7 @@ import {createStructuredSelector} from 'reselect';
 import Spinner from './components/spinner/spinner';
 import ErrorBoundary from './components/error-boundary/error-boundary';
 import './App.css';
+
 const HomePage = lazy(() => import ('./Pages/Homepage/homepage.component'))
 const Dashboard = lazy(() => import ('./Pages/Dashboard/dashboard'))
 const ShopPage = lazy(() => import ('./Pages/Shop/shop'))
