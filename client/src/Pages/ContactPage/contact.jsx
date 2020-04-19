@@ -15,10 +15,14 @@ const ContactPage = () => {
       const handleSubmit = e => {
         e.preventDefault()
 
+        let url;
+        process.env.NODE_ENV === 'production' ?  url = "https://allrange.herokuapp.com/sendtome"
+            : url = "/sendtome";
+
     const {email, name, message} = inputs
     axios({
         method: "POST",
-        url:"/sendtome",
+        url: url,
         data: {
             name,
             email,
