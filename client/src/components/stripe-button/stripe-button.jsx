@@ -9,7 +9,7 @@ const pubishableKey = 'pk_test_mx1ed7a7sVkWaupP4WkrBbav000uwjC4Ye'
 const onToken = token => {
     axios({
        url: "payment",
-       method: 'post',
+       method: 'POST',
        data:{
            amount: priceForStripe,
            token: token

@@ -1,7 +1,7 @@
 import React,  {useState} from 'react';
-import  { FormContainer }  from './contact.styles';
+import  { FormContainer, Background, Button, ContactHeader, }  from './contact.styles';
 import FormInput from '../../components/form-input/form-input';
-import CustomButton from '../../components/custom-button/custom-button';
+//import CustomButton from '../../components/custom-button/custom-button';
 import axios from 'axios';
 
 const ContactPage = () => {    
@@ -17,14 +17,13 @@ const ContactPage = () => {
 
     const {email, name, message} = inputs
     axios({
-        url: "sendtome",
-        method: 'post',
-        data:{
-            email: email,
-            name: name,
-            message: message
-        } 
-     })
+        method: "POST",
+        url:"/sendtome",
+        data: {
+            name,
+            email,
+            message,
+        }})
      .then(response => {
         alert("Message Sent");
     })
@@ -37,15 +36,19 @@ const ContactPage = () => {
 };
      
         return(
+
             <form onSubmit={handleSubmit}>
-            <FormContainer>
+           
+            <Background>
             
+            <FormContainer>
+            <ContactHeader>Contact Us</ContactHeader>
             <FormInput
                 type="text"
                 name="name"
                 onChange={handleChange}
                 value = {inputs.name}
-                label ="name"
+                label ="Name"
                 required
                 />
 
@@ -59,6 +62,7 @@ const ContactPage = () => {
                 required
                 />
                  
+              
                 <textarea
                 name="message"
                 type="textarea"
@@ -68,9 +72,11 @@ const ContactPage = () => {
                 rows='10'
                 cols='30'
                 />
-            <CustomButton> Submit </CustomButton>
+            <Button> Submit </Button>
+           
         
         </FormContainer>
+        </Background>
         </form>
     
 )}
