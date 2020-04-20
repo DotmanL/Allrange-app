@@ -4,7 +4,13 @@ const nodemailer = require('nodemailer')
 const { google } = require("googleapis");
 const OAuth2 = google.auth.OAuth2;
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'))
 
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+  })
+}
 
 const oauth2Client = new OAuth2(
   process.env.ClientID,
@@ -13,26 +19,26 @@ const oauth2Client = new OAuth2(
 );
 
 oauth2Client.setCredentials({
-  refresh_token: `1//042nj6Cs1mkjlCgYIARAAGAQSNwF-L9IrXUVSHYpVyfXcprKb5Fg7GURFHc2AvSXOrmTr5Nv4ARLcOlwIUBG5vOhypCiKMHenZGk`
+  refresh_token:"1//04t5Q7N5EA86SCgYIARAAGAQSNwF-L9Irm963eHtT5dFWyC-zda91KuNnzFgyp0ZweHn2fH_j7cxxnkqDc5QUQ2Y1DMOQNASWBb8"
 });
 
 //const accessToken = oauth2Client.getAccessToken()
 
-const smtpConfig = {
+const transport =  {
   host: 'smtp.gmail.com',
   port: 465,
   secure: true,
   auth: {
        type: "OAuth2",
        user: "oladotunlawal7@gmail.com", 
-       ClientId: process.env.ClientID,
-       ClientSecret: process.env.ClientSecret,
-       RefreshToken: process.env.RefreshToken,
-       accessToken: process.env.AccessToken
+       clientId: process.env.ClientID,
+       clientSecret: process.env.ClientSecret,
+       refreshToken: process.env.RefreshToken,
+       accessToken: "ya29.a0Ae4lvC1FBpSMGF_nziGSKcqZGyc6lIE4tR3audAW2NQePYS0jpASiTbZWqyBXXGwLV_0lyLNkuTJVHpacyfHkv8lFwA4XjDQkGh9EjSy9tN4DRXq-uCkL7gXaF6ax5GFw9Zj0NnJSn_Qx_YXi9bttXQBZ59HW5X1LWc"
   }
 };
 
-  const transporter = nodemailer.createTransport(smtpConfig);
+  const transporter = nodemailer.createTransport(transport);
   transporter.verify((error, success) => {
     if(error) {
       console.error(error)
@@ -53,7 +59,7 @@ const smtpConfig = {
 
       message:  ${req.body.message}`
     }
-    
+
 transporter.sendMail(mail, (err,data) => {
     if(err) {
       res.json({
