@@ -30,15 +30,20 @@ const ContactPage = () => {
         }})
      .then(response => {
         alert("Message Sent");
+        //resetForm();
     })
     .catch(error => {
         console.log('Message Error: ', error);
         alert(
             'Contact me directly'
         );
+        //resetForm();
     });
 };
-     
+/*
+const resetForm = () => {
+    setInputs('');
+};  */   
         return(
 
             <form onSubmit={handleSubmit}>
