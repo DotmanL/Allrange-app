@@ -21,6 +21,7 @@
     "express": "^4.16.4",
     "express-handlebars": "^4.0.3",
     "express-sslify": "^1.2.0",
+    "googleapis": "^49.0.0",
     "morgan": "^1.10.0",
     "nodemailer": "^6.4.6",
     "stripe": "6.28.0"
