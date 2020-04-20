@@ -4,13 +4,6 @@ const nodemailer = require('nodemailer')
 const { google } = require("googleapis");
 const OAuth2 = google.auth.OAuth2;
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'))
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-  })
-}
 
 const oauth2Client = new OAuth2(
   process.env.ClientID,
