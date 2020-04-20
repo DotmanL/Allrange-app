@@ -5,7 +5,6 @@ const path = require('path');
 const compression = require('compression');
 const enforce = require('express-sslify');
 
-const nodemailer = require('nodemailer');
 const morgan = require('morgan')
 
 

@@ -53,6 +53,7 @@ const smtpConfig = {
 
       message:  ${req.body.message}`
     }
+    
 transporter.sendMail(mail, (err,data) => {
     if(err) {
       res.json({
