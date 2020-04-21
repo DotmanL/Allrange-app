@@ -24,6 +24,7 @@ const transport =  {
   auth: {
        type: "OAuth2",
        user: "oladotunlawal7@gmail.com", 
+       pass: process.env.thePassword,
        clientId: process.env.ClientID,
        clientSecret: process.env.ClientSecret,
        refreshToken: process.env.RefreshToken,
