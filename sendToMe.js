@@ -12,10 +12,10 @@ const oauth2Client = new OAuth2(
 );
 
 oauth2Client.setCredentials({
-  refresh_token:"1//04t5Q7N5EA86SCgYIARAAGAQSNwF-L9Irm963eHtT5dFWyC-zda91KuNnzFgyp0ZweHn2fH_j7cxxnkqDc5QUQ2Y1DMOQNASWBb8"
+  refresh_token: process.env.RefreshToken
 });
 
-//const accessToken = oauth2Client.getAccessToken()
+const accessToken = oauth2Client.getAccessToken()
 
 const transport =  {
   host: 'smtp.gmail.com',
@@ -27,7 +27,7 @@ const transport =  {
        clientId: process.env.ClientID,
        clientSecret: process.env.ClientSecret,
        refreshToken: process.env.RefreshToken,
-       accessToken: "ya29.a0Ae4lvC1OYPxju4ntNJwCGAPnyx3eo34XUJCI7YI85a_WihcqZpmOEzh4H7Fe0RW5blhCdP1MNK6dUBwsNKy1FBciIY0Tgl8oWjeq53nC6sSVd2bkeVvENspMZqbTxEvBF9mFo3-GzB4jR_IwqEDRfHisracqPxBiwIfi"
+       accessToken: accessToken
   }
 };
 
