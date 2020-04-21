@@ -1,10 +1,10 @@
 const express = require('express')
 const sendToMeRouter = express.Router()
 const nodemailer = require('nodemailer')
-const { google } = require("googleapis");
-const OAuth2 = google.auth.OAuth2;
+//const { google } = require("googleapis");
+//const OAuth2 = google.auth.OAuth2;
 
-
+/*
 const oauth2Client = new OAuth2(
   process.env.ClientID,
   process.env.ClientSecret,
@@ -16,19 +16,15 @@ oauth2Client.setCredentials({
 });
 
 const accessToken = oauth2Client.getAccessToken()
+*/
 
-const transport =  {
+const transport = {
   host: 'smtp.gmail.com',
-  port: 465,
-  secure: true,
+  port: 587,
+  secure: false,
   auth: {
-       type: "OAuth2",
-       user: "oladotunlawal7@gmail.com", 
-       pass: process.env.thePassword,
-       clientId: process.env.ClientID,
-       clientSecret: process.env.ClientSecret,
-       refreshToken: process.env.RefreshToken,
-       accessToken: accessToken
+    user: process.env.THE_EMAIL,
+    pass: process.env.thePassword,
   }
 };
 
