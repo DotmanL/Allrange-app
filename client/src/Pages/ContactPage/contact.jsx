@@ -1,12 +1,12 @@
 import React,  {useState} from 'react';
 import  { FormContainer, Background, Button, ContactHeader, }  from './contact.styles';
 import FormInput from '../../components/form-input/form-input';
-//import CustomButton from '../../components/custom-button/custom-button';
 import axios from 'axios';
 
 const ContactPage = () => {    
     const [inputs, setInputs] = useState({email: '', name: '', message:'',})
 
+      
     const handleChange = (event)=> {
         const {name, value} = event.target
         setInputs(prev => ({...prev, [name]: value }))
@@ -14,10 +14,7 @@ const ContactPage = () => {
 
       const handleSubmit = e => {
         e.preventDefault()
-
-       /* let url;
-        process.env.NODE_ENV === 'production' ?  url = "https://allrange.herokuapp.com/sendtome"
-            : url = "/sendtome"; */
+        setInputs({email: '', name: '', message:'',})
 
     const {email, name, message} = inputs
     axios({
@@ -30,20 +27,19 @@ const ContactPage = () => {
         }})
      .then(response => {
         alert("Message Sent");
-        //resetForm();
+    
     })
     .catch(error => {
         console.log('Message Error: ', error);
         alert(
             'Contact me directly'
         );
-        //resetForm();
+            
     });
+    
 };
-/*
-const resetForm = () => {
-    setInputs('');
-};  */   
+
+ 
         return(
 
             <form onSubmit={handleSubmit}>
