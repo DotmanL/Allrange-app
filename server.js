@@ -3,7 +3,7 @@ const cors = require('cors');
 //const bodyParser = require('body-parser');
 const path = require('path');
 const compression = require('compression');
-//const enforce = require('express-sslify');
+const enforce = require('express-sslify');
 
 const morgan = require('morgan')
 
@@ -27,7 +27,7 @@ app.use(compression());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //app.use(bodyParser.urlencoded ({ extended: true }));
-//app.use(enforce.HTTPS({ trustProtoHeader: true }));
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use(cors());
 app.use(morgan('dev'))
 app.use('/sendtome', require('./sendToMe'))
