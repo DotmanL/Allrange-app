@@ -9,12 +9,16 @@
 
 >Firebase, firestore for our database.
 
->Node Api back-end to handle our payment integrations and nodemaile.
+>Node Api back-end to handle our payment integrations and nodemailer.
 
 >Progressive Web App compliant.
 
 >Payment Integration with Stripe and Paystack.
 
->Contact form with nodemailer.
+>Contact form with nodemailer on the back-end.
+
+>React lazy to lazy load our pages, helps in improving perfomance. 
+
+
 
  
