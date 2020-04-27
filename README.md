@@ -1,5 +1,5 @@
 # Allrange-app
->An eCommerce app built with react (still in development)
+>An eCommerce app built with react.
 
 >Web app built with React, Redux for State Mangement.
 
