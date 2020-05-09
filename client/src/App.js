@@ -2,6 +2,7 @@ import React, {useEffect, lazy, Suspense} from 'react';
 import { GlobalStyle } from './global.styles';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Header from './components/Header/header';
+//import Navigate from './components/navbar/navbar';
 import {connect} from 'react-redux';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
@@ -29,7 +30,9 @@ const App = ({ checkUserSession, currentUser }) => {
   return (
     <div>
       <GlobalStyle />
+      
       <Header/>
+     
       <Switch>
         <ErrorBoundary>
       <Suspense fallback= {<Spinner />}>
