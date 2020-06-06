@@ -5,15 +5,15 @@ import  regform from './regform.jpg';
 
 export const Background = styled.div`
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   background-image: url(${regform}) no-repeat;
   background-size: cover; 
   
   @media screen and ( max-width: 800px) {
-    background: #39459b;
-    border: 5px solid #0d99d7; 
+    background: darkblue;
+    border: 5px solid white; 
     width: 95vw;
     align-items: center;
     } 
@@ -23,8 +23,8 @@ export const Background = styled.div`
 export const FormContainer = styled.div`
   width: 50vw;
   margin: auto;
-  background: #39459b;
-  border: 5px solid #0d99d7;
+    border-radius: 10px;
+    border: 5px solid white;
   padding: 77px 99px 87px;
 
   @media screen and ( max-width: 800px) {
@@ -93,7 +93,7 @@ export const Button = styled.button`
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2098D1;
+    background: green;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
     -webkit-transform-origin: 0 50%;

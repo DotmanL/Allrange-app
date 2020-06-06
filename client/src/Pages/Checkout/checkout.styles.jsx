@@ -7,6 +7,7 @@ export const CheckoutPageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 50px auto 0;
+  color: black;
  
   button {
     margin-left: auto;
@@ -30,7 +31,7 @@ export const HeaderBlockContainer = styled.div`
   text-transform: capitalize;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   width: 23%;
-  color: darkblue;
+  color: black;
   font-size: 16px;
   
   &:last-child {

@@ -5,11 +5,11 @@ export const CartDropdownContainer = styled.div`
 position: absolute;
 width: 240px;
 height: 340px;
+background: #1f5673;
 display: flex;
 flex-direction: column;
 padding: 20px;
-border: 3px solid  darkblue;
-background-color:  yellow;
+border: 3px solid #faf9f9;;
 top: 90px;
 right: 60px;
 z-index: 5;

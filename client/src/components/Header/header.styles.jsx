@@ -53,10 +53,10 @@ export const OptionsContainer = styled.div`
     `;
 
 export const OptionLink = styled(Link)`
-  color: darkblue;
   font-size: 20px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  
+  color: #faf9f9;
+
   padding: 10px 20px;
   cursor: pointer;
 
@@ -77,7 +77,8 @@ export const OptionCont = styled.div`
     align-items: center;
     font-size: 15px;
     font-style: strong;
-    color: white;
+    
+  
   
 
     @media screen and ( max-width: 800px) {
@@ -86,18 +87,3 @@ export const OptionCont = styled.div`
 
 
     `;
-
-
-
-
-// export const ReactTyping = styled.div`
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     width: 100%;
-//     text-align: center;
-//     margin-left: 100px;
-//     font-size: 25px;
-//     color: white;
-//     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-// `;

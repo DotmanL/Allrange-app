@@ -5,18 +5,19 @@ export const Card = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-width: 22vw;
+width: 20vw;
 height: 350px;
-background-color: darkblue;
-border-radius: 0px;
+background-color: #e5e5e5;
+border-radius: 10px;
 padding: 0.5rem;
 margin: 0.5rem;
+
 position: relative;
 
 
 &:hover {
   .image{
-  opacity: 0.5;
+  opacity: 0.9;
   cursor: pointer;
 }
 button {
@@ -80,7 +81,7 @@ export const CollectionFooterContainer = styled.div`
 `;
 
 export const NameContainer = styled.span`
-  color: white;
+color: black;
   width: 90%;
   margin-bottom: 15px;
 
@@ -94,7 +95,7 @@ export const NameContainer = styled.span`
 `;
 
 export const PriceContainer = styled.span`
-  color: white;
+  color: black;
   width: 20%;
   text-align: right;
 `;
