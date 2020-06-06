@@ -10,7 +10,6 @@ import  cartt from './cartt.jpg';
 export const GlobalStyle = createGlobalStyle`
   body {
 background-image:  url(${cartt});
-width: 100%;
 height: 100vh;
 background-size: cover;
 position: relative;
