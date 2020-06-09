@@ -2,7 +2,8 @@
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="350px" height="200px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+	 fill='#faf9f9' width="350px" height="200px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+	 
 <g>
 	<polygon points="641.484,342.067 638.674,362.638 594.414,362.638 590.464,391.487 587.654,412.058 436.114,412.058 
 		443.074,435.627 584.434,435.627 581.874,454.377 578.854,476.417 576.234,495.628 437.944,495.628 432.274,476.417 
@@ -11,5 +12,5 @@
 	<circle cx="462.719" cy="524.013" r="15.178"/>
 	<circle cx="546.54" cy="524.013" r="15.178"/>
 </g>
-<text transform="matrix(1 0 0 1 303.9844 616.4824)" font-family="'Metropolis-Bold'" font-size="72">ALL RANGE</text>
+<text transform="matrix(1 0 0 1 303.9844 616.4824)" font-family="'Metropolis-Bold'" font-size="72" color="white">ALL RANGE</text>
 </svg>
